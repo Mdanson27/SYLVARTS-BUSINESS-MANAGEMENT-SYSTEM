@@ -1,58 +1,95 @@
-# Sylvarts Fashion Collection - Business Management System Demo
+# Sylvarts Fashion Collection — Business Management System Demo
 
-A static, GitHub Pages-ready business management system prototype for **Sylvarts Fashion Collection**.
+A presentation-ready, GitHub Pages-compatible business management system prototype for **Sylvarts Fashion Collection**.
 
-## Demo modules
+## Project structure
 
-- Dashboard with business KPIs and sales trend
-- Inventory management
-- Reorder-level alerts
-- Product add/edit workflow
-- Sales recording with automatic stock deduction
-- Receipt creation and printable preview
-- Invoice creation, status tracking and printable preview
-- Business activity tracking
-- Management reports
+- `index.html` — semantic application shell, branded loader, navigation and modal containers
+- `styles.css` — full responsive design system, premium animations, loader, dashboard, tables, documents and mobile UI
+- `app.js` — interactive demo logic, inventory, sales, receipts, invoices, tracking, reporting and local persistence
+- `Slyvarts-logo.png` — supplied Sylvarts Fashion Collection logo
+- `.nojekyll` — keeps GitHub Pages in simple static-site mode
+- `docs/PROJECT-PLAN.md` — implementation roadmap
+
+## Demo functionality
+
+### Dashboard
+- Business KPI overview
+- Sales trend visualization
+- Inventory retail value
+- Low-stock / out-of-stock intelligence
+- Outstanding invoice tracking
+- Recent sales and operational activity
+
+### Inventory
+- Product catalogue
+- SKU and category tracking
+- Cost and selling prices
+- Current stock levels
+- Per-product reorder levels
+- Automatic low-stock and out-of-stock status
+- Add and edit products
+- Search and stock filters
 - CSV inventory export
-- Responsive mobile layout
-- Branded animated loader
-- Browser persistence using `localStorage`
 
-## Brand
+### Sales
+- Interactive sale creation
+- Product/quantity selection
+- Stock availability validation
+- Automatic total calculation
+- Automatic stock deduction after checkout
+- Payment-method capture
+- Customer-name capture
 
-The demo uses Sylvarts Fashion Collection's supplied logo and its navy, magenta and white visual identity.
+### Receipts
+- Receipt history based on sales
+- Branded printable receipt preview
+- Customer, items, quantities, unit prices and totals
 
-TikTok: https://www.tiktok.com/@sylvartsfashioncolection
+### Invoices
+- Create demo invoices
+- Draft / Pending / Paid status
+- Due dates and customer details
+- Outstanding receivables tracking
+- Branded printable invoice preview
 
-## Run locally
+### Tracking & Reports
+- Reorder attention board
+- Payment follow-up board
+- Operational event log
+- Inventory at cost
+- Inventory retail value
+- Potential gross margin
+- Stock by category
 
-Open `index.html` directly, or serve the folder with any simple static server.
+## Presentation experience
+
+The demo includes a custom Sylvarts loader inspired by the brand’s fashion identity: a heel is drawn on screen, decorative elements grow around the silhouette, and the real Sylvarts logo is revealed before the management dashboard opens.
+
+The UI is responsive for desktop, tablet and mobile and uses the Sylvarts navy, magenta, white and cyan-accent visual identity.
+
+## Demo storage
+
+This version deliberately uses browser `localStorage`. This gives the demo enough real interaction to add products, record sales, update stock and create invoices while remaining a simple static site that can run directly on GitHub Pages.
+
+Use **Settings → Reset demo data** inside the application to restore the original sample records.
 
 ## GitHub Pages
 
-This project is intentionally dependency-free so it can be hosted directly from GitHub Pages.
+For this repository use:
 
-Recommended repository name:
+- **Source:** Deploy from a branch
+- **Branch:** `main`
+- **Folder:** `/ (root)`
 
-`SYLVARTS-BUSINESS-MANAGEMENT-SYSTEM`
+Expected public URL:
 
-After the repository exists, push the project to `main`, then enable GitHub Pages for the `main` branch / root folder if required by the repository settings.
+`https://mdanson27.github.io/SYLVARTS-BUSINESS-MANAGEMENT-SYSTEM/`
 
 ## Production roadmap
 
-This demo intentionally uses browser storage only. The production version should add:
+The production system should replace browser storage with a secured backend and add authentication, role-based access, cloud backups, suppliers and purchase orders, barcode support, PDF generation, automated notifications, expenses, approval workflows, audit logs, multi-location stock and payment integrations.
 
-1. Real authentication and role permissions
-2. Cloud database and backups
-3. Customer and supplier database
-4. Purchase orders and receiving
-5. Barcode / SKU scanning
-6. Multi-location stock
-7. Full sales line-item history
-8. Invoice and receipt numbering controlled by backend
-9. PDF generation and sharing
-10. Audit logs
-11. Expense tracking and profit reporting
-12. Mobile Money / payment integration where appropriate
-13. Automated low-stock notifications
-14. User activity and approval workflows
+## Brand link
+
+TikTok: https://www.tiktok.com/@sylvartsfashioncolection
