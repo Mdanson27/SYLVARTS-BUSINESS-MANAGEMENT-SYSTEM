@@ -1,0 +1,76 @@
+/* Sylvarts Business OS — Bag-led retail polish V5 */
+
+/* Bag catalogue colour indicators */
+.bag-pos-product{position:relative;overflow:hidden}
+.bag-pos-product::after{content:"";position:absolute;inset:auto -35px -42px auto;width:95px;height:95px;border-radius:50%;background:radial-gradient(circle,rgba(111,66,168,.10),transparent 68%);pointer-events:none}
+.bag-swatches{display:flex;align-items:center;gap:5px;min-height:18px;margin:8px 0 5px}
+.bag-swatch{width:13px;height:13px;border-radius:50%;background:var(--bag-swatch);border:1px solid rgba(25,25,35,.14);box-shadow:0 0 0 2px #fff}
+.bag-swatches small{font-size:.56rem;color:var(--muted);font-weight:750;margin-left:2px}
+
+/* The purple areas should feel alive, not animated for animation's sake. */
+.login-visual{background-size:180% 180%;animation:sylvartsDarkBreath 14s ease-in-out infinite}
+.login-visual .visual-glow{animation:sylvartsPurpleFloat 10s ease-in-out infinite,sylvartsGlowPulse 6.5s ease-in-out infinite}
+
+.hero-panel::before{animation:sylvartsHeroGlow 9s ease-in-out infinite;transform-origin:center}
+.hero-panel::after{animation:sylvartsHeroGlowAlt 12s ease-in-out infinite;transform-origin:center}
+
+.sidebar{isolation:isolate;overflow:hidden}
+.sidebar::before{content:"";position:absolute;z-index:0;width:340px;height:340px;right:-220px;top:10%;border-radius:50%;background:radial-gradient(circle,rgba(121,66,183,.25),rgba(227,11,125,.08) 38%,transparent 70%);filter:blur(2px);opacity:.38;pointer-events:none;animation:sylvartsSidebarLight 12s ease-in-out infinite}
+.sidebar::after{content:"";position:absolute;z-index:0;width:260px;height:260px;left:-180px;bottom:2%;border-radius:50%;background:radial-gradient(circle,rgba(227,11,125,.17),transparent 68%);opacity:.24;pointer-events:none;animation:sylvartsSidebarLightAlt 15s ease-in-out infinite}
+.sidebar> *{position:relative;z-index:1}
+
+/* Occasional premium shine through dark presentation surfaces */
+.login-visual::after{content:"";position:absolute;inset:-30% -80%;z-index:1;pointer-events:none;background:linear-gradient(108deg,transparent 41%,rgba(255,255,255,.025) 47%,rgba(196,135,255,.07) 50%,rgba(255,255,255,.025) 53%,transparent 59%);transform:translateX(-32%) rotate(1deg);animation:sylvartsRareShine 11s ease-in-out infinite}
+.login-brand,.login-copy{position:relative;z-index:2}
+
+.hero-panel{isolation:isolate}
+.hero-panel>div{z-index:2}
+.hero-panel .hero-title span{position:relative;text-shadow:0 0 24px rgba(227,11,125,.12)}
+
+@keyframes sylvartsDarkBreath{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:72% 48%}
+}
+@keyframes sylvartsPurpleFloat{
+  0%,100%{transform:translate3d(0,0,0) scale(1);opacity:.82}
+  38%{transform:translate3d(-34px,-16px,0) scale(1.06);opacity:1}
+  72%{transform:translate3d(18px,-36px,0) scale(.98);opacity:.76}
+}
+@keyframes sylvartsGlowPulse{
+  0%,100%{filter:saturate(1) brightness(1)}
+  50%{filter:saturate(1.15) brightness(1.12)}
+}
+@keyframes sylvartsHeroGlow{
+  0%,100%{transform:translate3d(0,0,0) scale(1);opacity:.86}
+  45%{transform:translate3d(-32px,22px,0) scale(1.10);opacity:1}
+  75%{transform:translate3d(12px,8px,0) scale(1.03);opacity:.78}
+}
+@keyframes sylvartsHeroGlowAlt{
+  0%,100%{transform:translate3d(0,0,0) scale(1)}
+  50%{transform:translate3d(44px,-18px,0) scale(1.10)}
+}
+@keyframes sylvartsSidebarLight{
+  0%,100%{transform:translate3d(0,-30px,0) scale(.92);opacity:.25}
+  40%{transform:translate3d(-45px,95px,0) scale(1.10);opacity:.52}
+  72%{transform:translate3d(-10px,180px,0) scale(.98);opacity:.31}
+}
+@keyframes sylvartsSidebarLightAlt{
+  0%,100%{transform:translate3d(0,0,0);opacity:.18}
+  50%{transform:translate3d(58px,-90px,0) scale(1.15);opacity:.34}
+}
+@keyframes sylvartsRareShine{
+  0%,58%{transform:translateX(-34%) rotate(1deg);opacity:0}
+  65%{opacity:1}
+  78%{transform:translateX(38%) rotate(1deg);opacity:1}
+  84%,100%{transform:translateX(48%) rotate(1deg);opacity:0}
+}
+
+@media (max-width:700px){
+  .bag-swatches{margin-top:7px}
+  .sidebar::before{width:280px;height:280px;right:-190px}
+  .login-visual::after{inset:-40% -140%}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .login-visual,.login-visual .visual-glow,.hero-panel::before,.hero-panel::after,.sidebar::before,.sidebar::after,.login-visual::after{animation:none!important}
+}
