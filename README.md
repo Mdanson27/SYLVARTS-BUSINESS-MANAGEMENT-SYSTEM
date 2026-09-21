@@ -1,3 +1,17 @@
+<p align="center">
+  <img src="assets/github-banner.svg" alt="Sylvarts Business OS — Retail Operations" width="100%" />
+</p>
+
+<p align="center">
+  <strong>From a fashion sale to stock, purchasing, customers and management insight — in one workflow.</strong>
+</p>
+
+<p align="center">
+  <code>POS</code> · <code>Inventory</code> · <code>Purchasing</code> · <code>Customers</code> · <code>Invoices</code> · <code>Reports</code>
+</p>
+
+---
+
 # Sylvarts Fashion Collection — Premium Business OS Demo
 
 A presentation-ready, GitHub Pages-compatible business management system prototype for **Sylvarts Fashion Collection**.
@@ -98,3 +112,7 @@ The site is designed to deploy directly from:
 - Folder: `/ (root)`
 
 No build process is required.
+
+---
+
+<p align="center"><strong>Designed as a business workflow — not just a collection of screens.</strong></p>
